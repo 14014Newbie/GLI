@@ -569,7 +569,7 @@ def bot(op):
                     wait["commentOn"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Alreadyã€‚")          
-            #elif "gurl" == msg.text:
+            elif "gurl" == msg.text:
                 #print cl.getGroup(msg.to)
                 ##cl.sendMessage(msg)
             elif msg.text in ["Block url:on"]:
@@ -596,7 +596,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Impossible use besides")
             elif msg.text in ["Urloff”]:
-                if msg.toType == 2:
+                    if msg.toType == 2:
                     group = cl.getGroup(msg.to)
                     group.preventJoinByTicket = True
                     cl.updateGroup(group)
@@ -610,7 +610,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Impossible use besides")
             elif msg.text in ["ginfo","Ginfo"]:
-                if msg.toType == 2:
+                    if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
                         gCreator = ginfo.creator.displayName
